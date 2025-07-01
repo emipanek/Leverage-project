@@ -2,7 +2,7 @@
 
 This project aims to optimize the selection of exoplanet targets for **Tier 2 observations** with ESA’s upcoming **Ariel mission**, focusing on maximizing observational **diversity and scientific return** under realistic time constraints.
 
-The foundation of this work builds on the target list presented in Edwards et al. 2020 which proposed a curated set of Tier 2 targets using fixed criteria, later referred as MCS (Mission Candidate Sample). While the baseline list is carefully selected, we seek to go further by quantifying and optimizing the leverage each planet contributes to Ariel’s overall science goals. The leverage have been explored in the following paper: https://arxiv.org/pdf/2506.06429
+The foundation of this work builds on the target list presented in Edwards & Tinetti 2022 which proposed a curated set of Tier 2 targets using fixed criteria, later referred as MCS (Mission Candidate Sample). While the baseline list is carefully selected, we seek to go further by quantifying and optimizing the leverage each planet contributes to Ariel’s overall science goals. The leverage have been explored in the following paper: https://arxiv.org/pdf/2506.06429
 
 Building up on this last paper, we are exploring here optimization methods, including:
 
