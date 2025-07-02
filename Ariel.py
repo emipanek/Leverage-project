@@ -23,7 +23,7 @@ work_dir = os.getcwd()
 
 
 # getting target list
-target_list_name = "Ariel_MCS_Known_2024-03-27"
+target_list_name = "Ariel_MCS_Known_2024-07-09"
 target_list = pd.read_csv(f"{target_lists}/{target_list_name}.csv")
 
 
