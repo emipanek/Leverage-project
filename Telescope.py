@@ -22,7 +22,7 @@ telescopes = cur_dir + "/Telescopes/"
 target_lists = cur_dir + "/target_lists/"
 
 # Default target list
-default_target_list_name = "Ariel_MCS_Known_2024-03-27"
+default_target_list_name = "Ariel_MCS_Known_2024-07-09"
 target_list_name = default_target_list_name
 target_list_changed = False
 
