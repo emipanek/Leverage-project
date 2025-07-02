@@ -1,8 +1,26 @@
 import pandas as pd
-import tkinter as tk
-from tkinter import ttk, messagebox, font, filedialog
-from thefuzz import process
 import os
+
+# Try to import tkinter, but make it optional
+try:
+    import tkinter as tk
+    from tkinter import ttk, messagebox, font, filedialog
+    TKINTER_AVAILABLE = True
+except ImportError:
+    # tkinter not available, create dummy objects
+    TKINTER_AVAILABLE = False
+    tk = None
+    ttk = None
+    messagebox = None
+    font = None
+    filedialog = None
+    print("Warning: tkinter not available. GUI functionality will be disabled.")
+
+try:
+    from thefuzz import process
+except ImportError:
+    process = None
+    print("Warning: thefuzz not available. Some fuzzy matching functionality will be disabled.")
 
 
 FONTSIZE = 12
@@ -193,6 +211,19 @@ def create_window(dataframes=None)->pd.DataFrame:
     Returns:
         pd.DataFrame: the updated DataFrame
     """
+    
+    # Check if tkinter is available
+    if not TKINTER_AVAILABLE:
+        print("Warning: tkinter not available. GUI functionality disabled.")
+        print("Returning input dataframes unchanged.")
+        if dataframes is None:
+            return None
+        elif isinstance(dataframes, pd.DataFrame):
+            return dataframes
+        elif isinstance(dataframes, dict) and len(dataframes) > 0:
+            return list(dataframes.values())[0]
+        else:
+            return None
     
     updated_df = None
     
